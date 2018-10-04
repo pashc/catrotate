@@ -1,8 +1,8 @@
 <template>
-  <div id="app" class="grid-container">
-    <Content class="content"/>
-    <Footer class="footer"/>
-  </div>
+  <v-app id="app">
+    <Content/>
+    <Footer/>
+  </v-app>
 </template>
 
 <script>
@@ -29,21 +29,6 @@
 
   body {
     background-color: #c6c6c6;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-areas: 'main' 'footer';
-    grid-gap: 10px;
-    padding: 10px;
-  }
-
-  .content {
-    grid-area: main;
-  }
-
-  .footer {
-    grid-area: footer;
   }
 
 </style>
