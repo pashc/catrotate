@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <h1>{{ title }}</h1>
-    <img :src=gifurl>
-    <br/>
+    <div class="picholder">
+      <img class="overlay" :src=gifurl>
+      <img style="position: relative;" src="./assets/stage_curtain.png">
+    </div>
+
     <a href="https://www.giphy.com">
       <img src="./assets/giphy_powered_by.png">
     </a>
@@ -54,6 +57,10 @@
     margin-top: 60px;
   }
 
+  body {
+    background-color: #c6c6c6;
+  }
+
   h1, h2 {
     font-weight: normal;
   }
@@ -71,4 +78,18 @@
   a {
     color: #42b983;
   }
+
+  .picholder {
+    position: relative;
+  }
+
+  .overlay {
+    bottom: 0;
+    left: 0;
+    top: 100px;
+    right: 0;
+    margin: auto;
+    position: absolute;
+  }
+
 </style>
