@@ -19,7 +19,8 @@
     data () {
       return {
         title: 'Cat Rotate',
-        gifurl: ''
+        gifurl: '',
+        timer: ''
       }
     },
     methods: {
@@ -35,6 +36,10 @@
     },
     created () {
       this.fetchGif()
+      this.timer = setInterval(this.fetchGif, 6000)
+    },
+    destroyed () {
+      clearInterval(this.timer)
     }
   }
 </script>
