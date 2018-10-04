@@ -1,11 +1,11 @@
 <template>
-  <div id="content">
+  <v-content id="content">
     <h1>{{ title }}</h1>
-    <div class="picholder">
+    <div class="pic-holder">
       <img class="overlay" :src=gifurl>
       <img class="curtain" src="../assets/stage_curtain.png">
     </div>
-  </div>
+  </v-content>
 </template>
 
 <script>
@@ -48,7 +48,7 @@
 
 <style>
 
-  .picholder {
+  .pic-holder {
     position: relative;
   }
 

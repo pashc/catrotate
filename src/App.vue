@@ -1,18 +1,18 @@
 <template>
-  <div id="app">
-    <Content/>
-    <a href="https://www.giphy.com">
-      <img src="./assets/giphy_powered_by.png">
-    </a>
+  <div id="app" class="grid-container">
+    <Content class="content"/>
+    <Footer class="footer"/>
   </div>
 </template>
 
 <script>
   import Content from './components/Content'
+  import Footer from './components/Footer'
 
   export default {
     components: {
-      Content
+      Content,
+      Footer
     }
   }
 </script>
@@ -29,6 +29,21 @@
 
   body {
     background-color: #c6c6c6;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-areas: 'main' 'footer';
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .content {
+    grid-area: main;
+  }
+
+  .footer {
+    grid-area: footer;
   }
 
 </style>
