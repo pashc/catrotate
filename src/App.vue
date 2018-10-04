@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="https://i.giphy.com/vFKqnCdLPNOKc.gif">
-    <h1>{{ msg }}</h1>
+    <h1>{{ title }}</h1>
+    <img :src=gifurl>
+    <br/>
     <a href="https://www.giphy.com">
       <img src="./assets/giphy_powered_by.png">
     </a>
@@ -9,12 +10,31 @@
 </template>
 
 <script>
+
+  const CONFIG = require('./config/config.json')
+  const giphy = require('giphy-api')(CONFIG.apikey)
+
   export default {
     name: 'app',
     data () {
       return {
-        msg: 'Welcome to Cat Rotate'
+        title: 'Cat Rotate',
+        gifurl: ''
       }
+    },
+    methods: {
+      fetchGif () {
+        giphy.random('cat', (err, res) => {
+          if (err) {
+            this.gifurl = require('./assets/error_page.png')
+          } else {
+            this.gifurl = res.data.fixed_height_downsampled_url
+          }
+        })
+      }
+    },
+    created () {
+      this.fetchGif()
     }
   }
 </script>
