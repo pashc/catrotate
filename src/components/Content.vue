@@ -4,6 +4,14 @@
       <img class="overlay" :src=gifurl>
       <img class="curtain" src="../assets/stage_curtain.png">
     </div>
+    <div class="pic-holder">
+      <button @click="startAutoReload()">
+        <img class="button" src="../assets/play-button.png" alt="play">
+      </button>
+      <button @click="stopAutoReload()">
+        <img class="button" src="../assets/pause-button.png" alt="pause">
+      </button>
+    </div>
   </v-content>
 </template>
 
@@ -31,20 +39,35 @@
             this.gifurl = res.data.fixed_height_downsampled_url
           }
         })
+      },
+      stopAutoReload () {
+        clearInterval(this.timer)
+      },
+      startAutoReload () {
+        this.fetchGif()
+        this.timer = setInterval(this.fetchGif, 6000)
       }
     },
     created () {
-      this.fetchGif()
-      this.timer = setInterval(this.fetchGif, 6000)
+      this.startAutoReload()
     },
     destroyed () {
-      clearInterval(this.timer)
+      this.stopAutoReload()
     }
   }
 
 </script>
 
 <style scoped>
+
+  button:focus {
+    cursor: pointer;
+    outline: none;
+  }
+
+  img.button {
+    height: 60px;
+  }
 
   .pic-holder {
     margin-top: 80px;

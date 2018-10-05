@@ -52,6 +52,11 @@
               these external websites and contents. Should you have questions about these external websites,
               please direct them to the respecting providers.
             </p>
+            <p>
+              Icons made by <a href="https://www.flaticon.com/authors/appzgear" title="Appzgear">Appzgear</a> from <a
+              href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a
+              href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            </p>
 
             <span>Last updated: October 05, 2018</span>
           </v-card-text>
@@ -163,7 +168,7 @@
   }
 </script>
 
-<style>
+<style scoped>
 
   .footer {
     color: #404040;
