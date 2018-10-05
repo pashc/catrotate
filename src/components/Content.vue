@@ -11,6 +11,9 @@
       <button @click="stopAutoReload()">
         <img class="button" src="../assets/pause-button.png" alt="pause">
       </button>
+      <button @click="nextGif()">
+        <img class="button" src="../assets/next-button.png" alt="next">
+      </button>
     </div>
   </v-content>
 </template>
@@ -40,15 +43,20 @@
           }
         })
       },
+      startAutoReload () {
+        this.timer = setInterval(this.fetchGif, 6000)
+      },
       stopAutoReload () {
         clearInterval(this.timer)
       },
-      startAutoReload () {
+      nextGif () {
+        this.stopAutoReload()
         this.fetchGif()
-        this.timer = setInterval(this.fetchGif, 6000)
+        this.startAutoReload()
       }
     },
     created () {
+      this.fetchGif()
       this.startAutoReload()
     },
     destroyed () {
