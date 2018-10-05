@@ -10,7 +10,7 @@
       <button class="button" @click="state.dialog.privacy = true">privacy</button>
     </div>
 
-    <div>
+    <div class="right">
       <a href="https://www.giphy.com">
         <img src="../assets/giphy_powered_by.png">
       </a>
@@ -170,6 +170,19 @@
 
 <style scoped>
 
+  button:focus {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .button {
+    padding: 3px;
+  }
+
+  .buttons {
+    right: 15px;
+    padding: 5px;
+  }
   .footer {
     color: #404040;
     padding: 5px;
@@ -178,19 +191,11 @@
     bottom: 0;
   }
 
-  .button {
-    padding: 3px;
-  }
-
-  .buttons {
+  .right {
     position: absolute;
-    right: 15px;
-    padding: 5px;
-  }
+    right: 0;
+    padding: 10px;
 
-  button:focus {
-    cursor: pointer;
-    outline: none;
   }
 
 
