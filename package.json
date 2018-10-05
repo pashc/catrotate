@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "giphy-api": "^1.2.7",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vuetify": "^1.2.6"
   },
   "browserslist": [
     "> 1%",
