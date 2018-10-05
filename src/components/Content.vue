@@ -46,7 +46,12 @@
 
 </script>
 
-<style>
+<style scoped>
+
+  h1 {
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
 
   .pic-holder {
     position: relative;
