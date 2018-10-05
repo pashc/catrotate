@@ -1,5 +1,6 @@
 <template>
   <v-app id="app">
+    <Toolbar/>
     <Content/>
     <Footer/>
   </v-app>
@@ -8,11 +9,13 @@
 <script>
   import Content from './components/Content'
   import Footer from './components/Footer'
+  import Toolbar from './components/Toolbar'
 
   export default {
     components: {
       Content,
-      Footer
+      Footer,
+      Toolbar
     }
   }
 </script>

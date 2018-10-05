@@ -1,6 +1,5 @@
 <template>
   <v-content id="content">
-    <h1>{{ title }}</h1>
     <div class="pic-holder">
       <img class="overlay" :src=gifurl>
       <img class="curtain" src="../assets/stage_curtain.png">
@@ -19,7 +18,6 @@
     name: 'Content',
     data () {
       return {
-        title: 'Cat Rotate',
         gifurl: '',
         timer: ''
       }
@@ -48,12 +46,9 @@
 
 <style scoped>
 
-  h1 {
+  .pic-holder {
     margin-top: 80px;
     margin-bottom: 30px;
-  }
-
-  .pic-holder {
     position: relative;
   }
 
