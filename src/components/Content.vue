@@ -21,9 +21,9 @@
 <script>
 
   import CONFIG from '../config/config.json'
-  import giphy_api from 'giphy-api'
+  import GphApiClient from 'giphy-js-sdk-core'
 
-  const giphy = giphy_api(CONFIG.apikey)
+  const giphy = GphApiClient(CONFIG.apikey)
 
   export default {
     name: 'Content',
@@ -35,16 +35,17 @@
     },
     methods: {
       fetchGif () {
-        giphy.random('cat', (err, res) => {
-          if (err) {
-            this.gifurl = require('../assets/error_page.png')
-          } else {
+        giphy.random('gifs', {tag: 'cat', rating: 'g', fmt: 'json'})
+          .then((res) => {
             this.gifurl = res.data.fixed_height_downsampled_url
-          }
-        })
+          })
+          .catch((err) => {
+            console.log('ERROR: ' + err)
+            this.gifurl = require('../assets/error_page.png')
+          })
       },
       startAutoReload () {
-        this.timer = setInterval(this.fetchGif, 6000)
+        this.timer = setInterval(this.fetchGif, 10000)
       },
       stopAutoReload () {
         clearInterval(this.timer)
