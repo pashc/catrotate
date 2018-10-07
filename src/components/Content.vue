@@ -36,7 +36,12 @@
     },
     methods: {
       fetchGif () {
-        giphy.random('cat', (err, res) => {
+        giphy.random(
+          {
+            tag: 'cat',
+            rating: 'g',
+            fmt: 'json'
+          }, (err, res) => {
           if (err) {
             this.gifurl = error_gif
           } else {
