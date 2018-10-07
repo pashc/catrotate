@@ -19,7 +19,7 @@
     data () {
       return {
         state: {
-          title: 'Cat Rotate'
+          title: 'Cat Roulette'
         },
         index_lnk: 'http://blog.paulwerner.org',
         mail_lnk: 'mailto:paulwerner@protonmail.com',
