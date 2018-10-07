@@ -56,8 +56,10 @@
       }
     },
     created () {
-      this.fetchGif()
-      this.startAutoReload()
+      if (this.gifurl === '') {
+        this.fetchGif()
+        this.startAutoReload()
+      }
     },
     destroyed () {
       this.stopAutoReload()
