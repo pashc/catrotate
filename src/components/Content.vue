@@ -37,7 +37,7 @@
       fetchGif () {
         giphy.random('cat', (err, res) => {
           if (err) {
-            this.gifurl = require('../assets/error_page.png')
+            this.gifurl = 'https://http.cat/500'
           } else {
             this.gifurl = res.data.fixed_height_downsampled_url
           }
@@ -96,6 +96,7 @@
     right: 0;
     margin: auto;
     position: absolute;
+    width: 320px;
   }
 
 </style>
