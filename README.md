@@ -1,4 +1,4 @@
-# Cat Rotate
+# Cat Roulette
 
 > cat gif's rotating randomly
 
