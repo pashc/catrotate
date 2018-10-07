@@ -22,6 +22,7 @@
 
   import CONFIG from '../config/config.json'
   import giphy_api from 'giphy-api'
+  import error_gif from '../assets/cat_error.gif'
 
   const giphy = giphy_api(CONFIG.apikey)
 
@@ -37,7 +38,7 @@
       fetchGif () {
         giphy.random('cat', (err, res) => {
           if (err) {
-            this.gifurl = 'https://http.cat/500'
+            this.gifurl = error_gif
           } else {
             this.gifurl = res.data.fixed_height_downsampled_url
           }
