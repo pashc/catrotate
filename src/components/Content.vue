@@ -22,6 +22,7 @@
 
   import CONFIG from '../config/config.json'
   import GphApiClient from 'giphy-js-sdk-core'
+  import error_gif from '../assets/cat_error.gif'
 
   const giphy = GphApiClient(CONFIG.apikey)
 
@@ -40,8 +41,7 @@
             this.gifurl = res.data.fixed_height_downsampled_url
           })
           .catch((err) => {
-            console.log('ERROR: ' + err)
-            this.gifurl = require('../assets/error_page.png')
+            this.gifurl = error_gif
           })
       },
       startAutoReload () {
