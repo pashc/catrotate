@@ -38,7 +38,7 @@
       fetchGif () {
         giphy.random('gifs', {tag: 'cat', rating: 'g', fmt: 'json'})
           .then((res) => {
-            this.gifurl = res.data.fixed_height_downsampled_url
+            this.gifurl = res.data.images.original.gif_url
           })
           .catch((err) => {
             this.gifurl = error_gif
