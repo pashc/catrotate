@@ -45,7 +45,7 @@
           })
       },
       startAutoReload () {
-        this.timer = setInterval(this.fetchGif, 10000)
+        this.timer = setInterval(this.fetchGif, 6000)
       },
       stopAutoReload () {
         clearInterval(this.timer)
@@ -97,6 +97,7 @@
     right: 0;
     margin: auto;
     position: absolute;
+    width: 320px;
   }
 
 </style>

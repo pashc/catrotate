@@ -1,6 +1,6 @@
-# Cat Rotate
+# Cat Roulette
 
-> cat gif's rotating randomly
+> cat gifs rotating randomly
 
 ## Build Setup
 

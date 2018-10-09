@@ -1,7 +1,7 @@
 {
-  "name": "catrotate",
+  "name": "catroulette",
   "description": "cat gifs rotating randomly",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "author": "Paul Werner <contact@paulwerner.org>",
   "license": "MIT",
   "private": true,
