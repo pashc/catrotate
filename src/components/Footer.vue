@@ -2,7 +2,7 @@
   <v-footer class="footer">
 
     <div class="left">
-      &copy; 2018 by Paul Werner
+      <a href="https://www.paulwerner.org">&copy; 2018 by Paul Werner</a>
     </div>
     <div class="buttons">
       <button class="button" @click="state.dialog.disclaimer = true">disclaimer</button>
@@ -169,6 +169,15 @@
 </script>
 
 <style scoped>
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: inherit;
+  }
 
   button:focus {
     cursor: pointer;

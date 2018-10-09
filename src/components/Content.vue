@@ -1,10 +1,10 @@
 <template>
   <v-content id="content">
     <div class="pic-holder">
+      <img class="curtain" src="../assets/stage_curtain.jpg">
       <img class="overlay" :src=gifurl>
-      <img class="curtain" src="../assets/stage_curtain.png">
     </div>
-    <div class="pic-holder">
+    <div>
       <button @click="startAutoReload()">
         <img class="button" src="../assets/play-button.png" alt="play">
       </button>
@@ -87,17 +87,21 @@
   }
 
   .curtain {
-    position: relative;
+    width: 60%;
+    -webkit-box-shadow: 9px 8px 11px -4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 9px 8px 11px -4px rgba(0, 0, 0, 0.3);
+    box-shadow: 9px 8px 11px -4px rgba(0, 0, 0, 0.3);
   }
 
   .overlay {
     bottom: 0;
     left: 0;
-    top: 100px;
+    top: 15%;
     right: 0;
+    border: solid 2px;
     margin: auto;
     position: absolute;
-    width: 320px;
+    width: 20%;
   }
 
 </style>

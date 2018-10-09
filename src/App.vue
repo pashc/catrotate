@@ -26,10 +26,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-  }
-
-  body {
-    background-color: #c6c6c6;
+    background-color: #898989;
   }
 
 </style>

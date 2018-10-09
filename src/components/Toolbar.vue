@@ -46,6 +46,7 @@
   }
 
   .nav {
+    background-color: #666666;
     margin-bottom: 20px;
   }
 
